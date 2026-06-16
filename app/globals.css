@@ -1,0 +1,212 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import 'shadcn/tailwind.css';
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-heading: var(--font-sans);
+  --font-sans: var(--font-geist-sans), 'Geist Fallback';
+  --font-mono: var(--font-geist-mono), 'Geist Mono Fallback';
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --color-foreground: var(--foreground);
+  --color-background: var(--background);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
+}
+
+:root {
+  --background: oklch(0.98 0 0);
+  --foreground: oklch(0.15 0 0);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.15 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.15 0 0);
+  --primary: oklch(0.39 0.18 38);
+  --primary-foreground: oklch(1 0 0);
+  --secondary: oklch(0.96 0.01 85);
+  --secondary-foreground: oklch(0.15 0 0);
+  --muted: oklch(0.95 0.01 50);
+  --muted-foreground: oklch(0.35 0.01 50);
+  --accent: oklch(0.22 0.02 260);
+  --accent-foreground: oklch(0.98 0 0);
+  --destructive: oklch(0.39 0.22 25);
+  --border: oklch(0.80 0.01 50);
+  --input: oklch(0.80 0.01 50);
+  --ring: oklch(0.39 0.21 38);
+  --chart-1: oklch(0.39 0.21 38);
+  --chart-2: oklch(0.39 0.15 80);
+  --chart-3: oklch(0.39 0.12 180);
+  --chart-4: oklch(0.39 0.12 280);
+  --chart-5: oklch(0.39 0.1 350);
+  --radius: 0.75rem;
+  --sidebar: oklch(1 0 0);
+  --sidebar-foreground: oklch(0.2 0 0);
+  --sidebar-primary: oklch(0.39 0.18 40);
+  --sidebar-primary-foreground: oklch(1 0 0);
+  --sidebar-accent: oklch(0.96 0.01 85);
+  --sidebar-accent-foreground: oklch(0.2 0 0);
+  --sidebar-border: oklch(0.9 0.01 85);
+  --sidebar-ring: oklch(0.39 0.18 40);
+}
+
+.dark {
+  --background: oklch(0.15 0.01 260);
+  --foreground: oklch(0.98 0 0);
+  --card: oklch(0.2 0.02 260);
+  --card-foreground: oklch(0.98 0 0);
+  --popover: oklch(0.2 0.02 260);
+  --popover-foreground: oklch(0.98 0 0);
+  --primary: oklch(0.39 0.18 38);
+  --primary-foreground: oklch(1 0 0);
+  --secondary: oklch(0.25 0.02 260);
+  --secondary-foreground: oklch(0.98 0 0);
+  --muted: oklch(0.25 0.02 260);
+  --muted-foreground: oklch(0.85 0.01 260);
+  --accent: oklch(0.3 0.03 260);
+  --accent-foreground: oklch(0.98 0 0);
+  --destructive: oklch(0.39 0.22 25);
+  --border: oklch(0.35 0.03 260);
+  --input: oklch(0.28 0.03 260);
+  --ring: oklch(0.39 0.2 40);
+  --chart-1: oklch(0.65 0.2 40);
+  --chart-2: oklch(0.55 0.15 80);
+  --chart-3: oklch(0.45 0.12 180);
+  --chart-4: oklch(0.65 0.12 280);
+  --chart-5: oklch(0.7 0.1 350);
+  --sidebar: oklch(0.2 0.02 260);
+  --sidebar-foreground: oklch(0.98 0 0);
+  --sidebar-primary: oklch(0.39 0.18 40);
+  --sidebar-primary-foreground: oklch(1 0 0);
+  --sidebar-accent: oklch(0.25 0.02 260);
+  --sidebar-accent-foreground: oklch(0.98 0 0);
+  --sidebar-border: oklch(0.3 0.03 260);
+  --sidebar-ring: oklch(0.39 0.2 40);
+}
+
+.high-contrast {
+  /* Eliminar textos grises, hacer que todo el texto secundario use el color principal de contraste */
+  --muted-foreground: var(--foreground);
+  
+  /* En modo claro alto contraste, el primario debe ser muy oscuro para verse bien sobre fondo blanco, con texto blanco */
+  --primary: oklch(0.25 0.18 38);
+  --primary-foreground: oklch(1 0 0);
+  
+  /* Bordes de alto contraste (negros en modo claro, blancos en modo oscuro) */
+  --border: var(--foreground);
+  --ring: var(--foreground);
+}
+
+.dark.high-contrast, .dark .high-contrast {
+  /* En modo oscuro alto contraste, el primario debe ser muy brillante para verse bien sobre fondo negro, con texto negro */
+  --primary: oklch(0.85 0.2 40);
+  --primary-foreground: oklch(0 0 0);
+}
+
+.high-contrast * {
+  /* Forzar un mayor peso de fuente para facilitar la lectura */
+  font-weight: 700 !important;
+  /* Aumentar el contraste de las sombras para que los elementos destaquen más */
+  box-shadow: none !important;
+}
+
+.filter-grayscale {
+  filter: grayscale(100%);
+}
+
+.filter-invert {
+  filter: invert(100%) hue-rotate(180deg);
+}
+
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  *:focus-visible {
+    outline: 3px solid var(--primary) !important;
+    outline-offset: 2px !important;
+  }
+  body {
+    @apply bg-background text-foreground overflow-hidden;
+  }
+  html {
+    @apply font-sans overflow-hidden;
+  }
+}
+
+@layer utilities {
+  /* Separar el color de texto del de fondo en modo oscuro para garantizar accesibilidad sin cambiar el branding de los botones */
+  .dark .text-primary {
+    color: oklch(0.85 0.2 40) !important;
+  }
+  .dark .text-destructive {
+    color: oklch(0.85 0.22 25) !important;
+  }
+}
+
+/* Text size scaling levels (1 is default, 2-5 are scaled up) */
+/* Level 2 */
+.text-size-2 .text-xs   { font-size: 0.8rem;   line-height: 1.15rem; }
+.text-size-2 .text-sm   { font-size: 0.925rem; line-height: 1.35rem; }
+.text-size-2 .text-base { font-size: 1.05rem;  line-height: 1.6rem;  }
+.text-size-2 .text-lg   { font-size: 1.175rem; line-height: 1.8rem;  }
+.text-size-2 .text-xl   { font-size: 1.3rem;   line-height: 1.8rem;  }
+.text-size-2 .text-2xl  { font-size: 1.6rem;   line-height: 2.1rem;  }
+
+/* Level 3 */
+.text-size-3 .text-xs   { font-size: 0.825rem; line-height: 1.2rem; }
+.text-size-3 .text-sm   { font-size: 0.95rem;  line-height: 1.4rem; }
+.text-size-3 .text-base { font-size: 1.1rem;   line-height: 1.65rem; }
+.text-size-3 .text-lg   { font-size: 1.225rem; line-height: 1.85rem; }
+.text-size-3 .text-xl   { font-size: 1.35rem;  line-height: 1.85rem; }
+.text-size-3 .text-2xl  { font-size: 1.65rem;  line-height: 2.15rem; }
+
+/* Level 4 (Previous 'large') */
+.text-size-4 .text-xs   { font-size: 0.85rem;  line-height: 1.25rem; }
+.text-size-4 .text-sm   { font-size: 1rem;     line-height: 1.5rem;  }
+.text-size-4 .text-base { font-size: 1.15rem;  line-height: 1.75rem; }
+.text-size-4 .text-lg   { font-size: 1.3rem;   line-height: 1.9rem;  }
+.text-size-4 .text-xl   { font-size: 1.45rem;  line-height: 1.9rem;  }
+.text-size-4 .text-2xl  { font-size: 1.75rem;  line-height: 2.2rem;  }
+
+/* Level 5 */
+.text-size-5 .text-xs   { font-size: 0.9rem;   line-height: 1.3rem; }
+.text-size-5 .text-sm   { font-size: 1.05rem;  line-height: 1.6rem; }
+.text-size-5 .text-base { font-size: 1.2rem;   line-height: 1.85rem; }
+.text-size-5 .text-lg   { font-size: 1.35rem;  line-height: 2rem;   }
+.text-size-5 .text-xl   { font-size: 1.5rem;   line-height: 2rem;   }
+.text-size-5 .text-2xl  { font-size: 1.85rem;  line-height: 2.3rem; }
